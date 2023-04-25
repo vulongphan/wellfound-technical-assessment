@@ -6,8 +6,10 @@
     <table class="table table-hover">
         <tr>
             <td>
-                <br>
-                <span id="post1">This is my one and only blog post. Can you add more using a for loop?</span>
+                {% for post in posts %}
+                    <br>
+                    <span id="post{{ post.id }}">{{ post.body }}</span>
+                {% endfor %}
             </td>
         </tr>
     </table>
